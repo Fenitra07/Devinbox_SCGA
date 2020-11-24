@@ -166,3 +166,38 @@ h1 {
 	text-align:center;
 }
 
+/*---------------------------------- tableaude bord----------------------------- */
+.dashboard__title h1, .direction__title h1{
+	margin: 80px 0;
+}
+
+.dashboard__content {
+padding: 0 100px;	
+display: grid;
+grid-template-columns: repeat(4,1fr);
+grid-gap: 10px
+}
+
+.direction{
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+width:300px;
+margin:5px;
+}
+
+.direction span{
+	background-color: #edf2f7;
+	background-color:rgba(237, 242, 247,.5);
+    font-size:xx-large;
+	cursor:pointer;
+	width:300px;
+	text-align:center;
+	border-radius:.8rem;
+	color:#000
+}
+.direction span:hover{
+	background-color: #4299e1;
+    background-color:rgba(66, 153, 225, .75)	
+}

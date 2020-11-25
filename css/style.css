@@ -774,8 +774,10 @@ li {
 	margin-right: .25rem;
 
 }
-
-.attrib__checklist {}
+.situation{
+	display: flex;
+	justify-content:center!important;
+}
 
 .attrib__responsable .responsable,
 .attrib__checklist .list {
@@ -835,11 +837,13 @@ li {
 	display: flex;
 	justify-content: space-evenly;
 	text-align: center;
-	align-items: center
+	align-items: center;
+	margin-right: .5rem;
 }
 
-.attrib__state .state__header span {
+.state__header span {
 	font-size: 1rem;
+	width: 4rem;
 	color: #000;
 }
 
@@ -857,6 +861,7 @@ li {
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	cursor: pointer
 }
 
 .state__check .absolute {
@@ -867,10 +872,21 @@ li {
 	height: 100%;
 	width: 3.25rem;
 	justify-content: center;
+	font-size:x-large
+}
+
+.state__check #date__de__fin{
+	height: 100%;
+	width: 4rem;
+	background: #fff;
+	border-radius: 5px
 }
 
 .state__check .text-yellow-600 {
 	color: #D97706
+}
+.state__check .text-red-600 {
+	color: #DC2626
 }
 
 .state__check .relative .background {
@@ -878,7 +894,8 @@ li {
 	height: 100%;
 	width: 4rem;
 	background: #fff;
-	border-radius: 5px
+	border-radius: 5px;
+	
 }
 
 .attribution__li {

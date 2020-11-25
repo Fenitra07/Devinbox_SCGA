@@ -106,15 +106,10 @@
 									</span>
 								</div>
 								<div class="header_date-picker">
-									<span class="flex items-center  mb-1">
+									<span>
 										<span><i class="fa fa-clock-o"></i></span>
 										<input type="date" name="" id="">
 									</span>
-									<!-- <span class="flex items-center  mb-3">
-										<span class="text-3xl mr-2"><i class="far fa-clock    "></i></span>
-										<input class="h-8 rounded pl-2" type="date" name="" id="">
-									</span> -->
-
 								</div>
 							</div>
 							<div class="activity__description">
@@ -164,7 +159,7 @@
 										<span></span>
 										<span></span>
 										<span></san>
-										<span></span>
+											<span></span>
 									</div>
 								</div>
 
@@ -209,6 +204,7 @@
 												<span>En cours</span>
 												<span>Fait</span>
 												<span>Archivé</span>
+												<span>Fin</span>
 											</div>
 											<div class="state__check  ">
 												<span class=" relative  ">
@@ -223,7 +219,13 @@
 												<span class=" relative  ">
 													<span class="absolute  text-yellow-600 "><i class="fa fa-archive"
 															aria-hidden="true"></i></i></span>
-													<span class="background  "></span></span>
+													<span class="background  "></span>
+												</span>
+												<span id="date__de__fin" class="relative ">
+													<span class="absolute  text-red-600 "><i class="fa fa-clock-o"
+															aria-hidden="true"></i></i></span>
+												</span>
+
 
 											</div>
 										</div>
@@ -283,6 +285,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script src="js/jquery.modal.js"></script>
+	<script src="js/popover.js"></script>
 	<script src="js/tableau_de_bord_scme_controller.js"></script>
 
 

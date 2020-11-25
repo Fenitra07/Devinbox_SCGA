@@ -38,6 +38,20 @@ let themes = [{
     },
 ];
 
+//selecteur de date de fin d'activité
+$('#date__de__fin').fu_popover({
+    content: '<input type="date" name="date de fin" style="color:#000" >',
+    placement: 'right',
+    width: '170px',
+    dismissable: true,
+    delay: {
+        "show": 100,
+        "hide": 100
+    }
+})
+
+
+//Rendu des themes sur le DOM
 themes.forEach((theme) => {
     let template = `<div class="theme__container theme-${theme.id}">
     <div class="theme__title">

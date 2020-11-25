@@ -204,11 +204,12 @@ h1 {
 	text-align: center;
 }
 
-/*---------------------------------- tableaude bord----------------------------- */
+/*---------------------------------- tableau de bord----------------------------- */
 .dashboard__title h1,
 .direction__title h1,
 .division__title h1 {
 	margin: 80px 0;
+	text-align:center
 }
 
 .dashboard__content {
@@ -605,6 +606,7 @@ li {
 	padding: 1rem;
 	box-shadow: rgba(0, 0, 0, .19);
 	resize: none;
+	color: #000;
 
 }
 
@@ -774,9 +776,10 @@ li {
 	margin-right: .25rem;
 
 }
-.situation{
+
+.situation {
 	display: flex;
-	justify-content:center!important;
+	justify-content: center !important;
 }
 
 .attrib__responsable .responsable,
@@ -872,10 +875,10 @@ li {
 	height: 100%;
 	width: 3.25rem;
 	justify-content: center;
-	font-size:x-large
+	font-size: x-large
 }
 
-.state__check #date__de__fin{
+.state__check #date__de__fin {
 	height: 100%;
 	width: 4rem;
 	background: #fff;
@@ -885,6 +888,7 @@ li {
 .state__check .text-yellow-600 {
 	color: #D97706
 }
+
 .state__check .text-red-600 {
 	color: #DC2626
 }
@@ -895,7 +899,7 @@ li {
 	width: 4rem;
 	background: #fff;
 	border-radius: 5px;
-	
+
 }
 
 .attribution__li {

@@ -65,7 +65,7 @@ themes.forEach((theme) => {
                     <span class="action__icon">
                         <i class="fa fa-plus" aria-hidden="true"></i>
                     </span>
-                    <input class="" type="text" placeholder="Ajouter">
+                    <input class="activity__add-${theme.id}" type="text" placeholder="Ajouter">
                 </span>
             </span>
         </div>
@@ -89,7 +89,11 @@ themes.forEach((theme) => {
                 fadeDuration: 300,
                 showClose: false,
             })
+            
+            $('.activity__title').text(activity.title)
+          
         })
+        $('.title__theme').text(`Dans ${theme.name}`)
     })
-
+    $('.title__theme').text(`Dans ${theme.name}`)
 })

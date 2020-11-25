@@ -22,8 +22,7 @@ direction.forEach((item,index)=>{
     $('.dashboard__content').append(template)
 //redirection vers la page de chaque direction
 
-    $(`#${index}`).click(function(){
-        window.location.href = `tableau_direction.html?id=${index}`
-        e.preventDefault();
+    $(`#0`).click(function(){
+        window.location.href = `tableau_direction_budget.html`
     })
 })

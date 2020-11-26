@@ -88,7 +88,7 @@
 					<h1 class="title">DIVISION SCME</h1>
 				</div>
 				<div class="division__content">
-					
+
 				</div>
 
 				<!-- Modal -->
@@ -103,12 +103,6 @@
 									<span class="title__container">
 										<h4 class="activity__title"></h4>
 										<h4 class="title__theme "></h4>
-									</span>
-								</div>
-								<div class="header_date-picker">
-									<span>
-										<span><i class="fa fa-clock-o"></i></span>
-										<input type="date" name="" id="">
 									</span>
 								</div>
 							</div>
@@ -174,8 +168,16 @@
 											<span class="title_header">Tâche</h1>
 										</div>
 										<div class="attribution__title situation">
-											<span><i class="fa fa-check-square" aria-hidden="true"></i></span>
-											<span class="title_header">Situation</span>
+											<div class="situation__header">
+												<span><i class="fa fa-check-square" aria-hidden="true"></i></span>
+												<span class="title__header">Situation</span>
+											</div>
+											<div class="state__header ">
+												<span>En cours</span>
+												<span>Fait</span>
+												<span>Standby</span>
+												<span>Fin</span>
+											</div>
 										</div>
 									</div>
 									<div class="attribution__list ">
@@ -186,8 +188,6 @@
 												</span>
 												<span class="name">Persone 01</span>
 											</span>
-											<span class="icon__right "><i class="fa fa-times"
-													aria-hidden="true"></i></span>
 										</div>
 										<div class="attrib__checklist ">
 											<span class="list ">
@@ -196,39 +196,34 @@
 												</span>
 												<span class="name">Liste 01</span>
 											</span>
-											<span class="icon__right "><i class="fa fa-times"
-													aria-hidden="true"></i></span>
+		
 										</div>
 										<div class="attrib__state w-full">
-											<div class="state__header ">
-												<span>En cours</span>
-												<span>Fait</span>
-												<span>Standby</span>
-												<span>Fin</span>
-											</div>
+
 											<div class="state__check  ">
 												<span class=" relative  ">
-													<span class="absolute  "><i class="fa fa-recycle"
-															aria-hidden="true"></i></span>
-													<span class="background"></span>
+													<input type="checkbox">
+													<span class="absolute icon-box "><i class="fa fa-recycle"
+															aria-hidden="true"></i>
+													</span>
 												</span>
 												<span class="relative ">
-													<span class="absolute "><i class="fa fa-check"
-															aria-hidden="true"></i></span>
-													<span class=" background"></span></span>
+													<input type="checkbox">
+													<span class="absolute icon-box"><i class="fa fa-check"
+															aria-hidden="true"></i>
+													</span>
+												</span>
 												<span class=" relative  ">
-													<span class="absolute  text-yellow-600 "><i class="fa fa-archive"
-															aria-hidden="true"></i></i></span>
-													<span class="background  "></span>
+													<input type="checkbox">
+													<span class="absolute icon-box text-yellow-600 "><i
+															class="fa fa-archive" aria-hidden="true"></i></i>
+													</span>
 												</span>
-												<span id="date__de__fin" class="relative ">
-													<span class="absolute  text-red-600 "><i class="fa fa-clock-o"
-															aria-hidden="true"></i></i></span>
-												</span>
-
-
+												
 											</div>
 										</div>
+										<span class="icon__right " style="color:#000"><i class="fa fa-times"
+											aria-hidden="true"></i></span>
 									</div>
 									<div class="ajouter__une__tache">
 										<div class="attrib__responsable ">
@@ -285,7 +280,7 @@
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script src="js/jquery.modal.js"></script>
-	<script src="js/popover.js"></script>
+	<!-- <script src="js/popover.js"></script> -->
 	<script src="js/tableau_de_bord_scme_controller.js"></script>
 
 

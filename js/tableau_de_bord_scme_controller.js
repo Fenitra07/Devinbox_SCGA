@@ -39,16 +39,16 @@ let themes = [{
 ];
 
 //selecteur de date de fin d'activité
-$('#date__de__fin').fu_popover({
-    content: '<input type="date" name="date de fin" style="color:#000" >',
-    placement: 'right',
-    width: '170px',
-    dismissable: true,
-    delay: {
-        "show": 100,
-        "hide": 100
-    }
-})
+// $('#date__de__fin').fu_popover({
+//     content: '<input type="date" name="date de fin" style="color:#000" >',
+//     placement: 'right',
+//     width: '170px',
+//     dismissable: true,
+//     delay: {
+//         "show": 100,
+//         "hide": 100
+//     }
+// })
 
 
 //Rendu des themes sur le DOM
@@ -106,8 +106,6 @@ $('#ajout__tache').click(() => {
             </span>
             <span class="name">Persone 01</span>
         </span>
-        <span class="icon__right "><i class="fa fa-times"
-                aria-hidden="true"></i></span>
     </div>
     <div class="attrib__checklist " style="margin-top:1rem">
         <span class="list ">
@@ -116,33 +114,31 @@ $('#ajout__tache').click(() => {
             </span>
             <span class="name">Liste 01</span>
         </span>
-        <span class="icon__right "><i class="fa fa-times"
-                aria-hidden="true"></i></span>
     </div>
     <div class="attrib__state w-full">
         <div class="state__check" style="margin-top:1rem">
             <span class=" relative  ">
-                <span class="absolute  "><i class="fa fa-recycle"
-                        aria-hidden="true"></i></span>
-                <span class="background"></span>
+                <input type="checkbox">
+                <span class="absolute icon-box "><i class="fa fa-recycle"
+                        aria-hidden="true"></i>
+                </span>
             </span>
             <span class="relative ">
-                <span class="absolute "><i class="fa fa-check"
-                        aria-hidden="true"></i></span>
-                <span class=" background"></span></span>
+                <input type="checkbox">
+                <span class="absolute icon-box"><i class="fa fa-check"
+                        aria-hidden="true"></i>
+                </span>
+            </span>
             <span class=" relative  ">
-                <span class="absolute  text-yellow-600 "><i class="fa fa-archive"
-                        aria-hidden="true"></i></i></span>
-                <span class="background  "></span>
+                <input type="checkbox">
+                <span class="absolute icon-box text-yellow-600 "><i class="fa fa-archive"
+                        aria-hidden="true"></i></i>
+                </span>
             </span>
-            <span id="date__de__fin" class="relative ">
-                <span class="absolute  text-red-600 "><i class="fa fa-clock-o"
-                        aria-hidden="true"></i></i></span>
-            </span>
-
-
+           
         </div>
     </div>
+    <span class="icon__right " style="color:#000"><i class="fa fa-times"aria-hidden="true"></i></span>
 </div>`
     $('.ajouter__une__tache').before(template)
 })

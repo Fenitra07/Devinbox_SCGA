@@ -760,7 +760,7 @@ li {
 .attribution__list {
 	display: flex;
 	justify-content: space-evenly;
-	;
+	align-items: center;
 	width: 100%;
 }
 
@@ -902,7 +902,7 @@ li {
 
 }
 
-.attribution__li {
+.ajouter__une__tache {
 	flex-shrink: 0;
 }
 
@@ -916,8 +916,11 @@ li {
 	justify-content: flex-start
 }
 
-.attrib__responsable .responsable input {
+.attrib__responsable .responsable h4{
 	width: 12rem;
+	display: flex;
+	align-items: center;
+	justify-content:center;
 	border: none;
 	height: 100%;
 	font-size: x-small;
@@ -925,8 +928,8 @@ li {
 	color: #000;
 }
 
-.attrib__responsable .responsable input:focus {
-	outline: none
+.attrib__responsable .responsable{
+	cursor: pointer;
 }
 
 .attrib__responsable .responsable .icon__right {

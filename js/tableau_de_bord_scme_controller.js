@@ -52,7 +52,7 @@ $('#date__de__fin').fu_popover({
 
 
 //Rendu des themes sur le DOM
-themes.forEach((theme) => {
+themes.forEach((theme, index) => {
     let template = `<div class="theme__container theme-${theme.id}">
     <div class="theme__title">
         <h4>${theme.name} </h4>
@@ -74,7 +74,7 @@ themes.forEach((theme) => {
 
     $('.division__content').append(template)
 
-    theme.activities.forEach((activity) => {
+    themes[index].activities.forEach((activity) => {
         let act__template = `
    <span class="activity activity-${activity.id}" >
          <h4>${activity.title}</h4>
@@ -89,11 +89,60 @@ themes.forEach((theme) => {
                 fadeDuration: 300,
                 showClose: false,
             })
-            
+
             $('.activity__title').text(activity.title)
-          
         })
-        $('.title__theme').text(`Dans ${theme.name}`)
     })
-    $('.title__theme').text(`Dans ${theme.name}`)
+    console.log($('.title__theme').text(`Dans ${theme.name}`))
+
+})
+
+$('#ajout__tache').click(() => {
+    let template = `<div class="attribution__list "style="height:auto">
+    <div class="attrib__responsable " style="margin-top:1rem">
+        <span class=" responsable " >
+            <span class="icon__left">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </span>
+            <span class="name">Persone 01</span>
+        </span>
+        <span class="icon__right "><i class="fa fa-times"
+                aria-hidden="true"></i></span>
+    </div>
+    <div class="attrib__checklist " style="margin-top:1rem">
+        <span class="list ">
+            <span class=" icon__left ">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+            </span>
+            <span class="name">Liste 01</span>
+        </span>
+        <span class="icon__right "><i class="fa fa-times"
+                aria-hidden="true"></i></span>
+    </div>
+    <div class="attrib__state w-full">
+        <div class="state__check" style="margin-top:1rem">
+            <span class=" relative  ">
+                <span class="absolute  "><i class="fa fa-recycle"
+                        aria-hidden="true"></i></span>
+                <span class="background"></span>
+            </span>
+            <span class="relative ">
+                <span class="absolute "><i class="fa fa-check"
+                        aria-hidden="true"></i></span>
+                <span class=" background"></span></span>
+            <span class=" relative  ">
+                <span class="absolute  text-yellow-600 "><i class="fa fa-archive"
+                        aria-hidden="true"></i></i></span>
+                <span class="background  "></span>
+            </span>
+            <span id="date__de__fin" class="relative ">
+                <span class="absolute  text-red-600 "><i class="fa fa-clock-o"
+                        aria-hidden="true"></i></i></span>
+            </span>
+
+
+        </div>
+    </div>
+</div>`
+    $('.ajouter__une__tache').before(template)
 })

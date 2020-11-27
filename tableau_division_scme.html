@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="fonticons/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/nav.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/jquery.modal.css">
 </head>
 
@@ -120,21 +121,21 @@
 										<h4>Pièce jointe</h4>
 									</span>
 									<span class="file__selector">
-										<label class="">
+										<label>
 											<span class=" selector__icon "><i class="fa fa-plus"
 													aria-hidden="true"></i></span>
 											<input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
 											<span class="selector__name ">Ajouter une
 												pièce</span>
 										</label>
-										<label class="">
+										<label>
 											<span class="selector__icon "><i class="fa fa-plus"
 													aria-hidden="true"></i></span>
 											<input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
 											<span class="selector__name ">Ajouter une
 												pièce</span>
 										</label>
-										<label class="">
+										<label>
 											<span class="selector__icon "><i class="fa fa-plus"
 													aria-hidden="true"></i></span>
 											<input type="file" class=" hidden  " placeholder="Ajouter une pièce" />
@@ -172,13 +173,20 @@
 												<span><i class="fa fa-check-square" aria-hidden="true"></i></span>
 												<span class="title__header">Situation</span>
 											</div>
-											<div class="state__header ">
+										</div>
+									</div>
+									<div class="check__header">
+										<span></span>
+										<span></span>
+										<span>
+											<span class="check__header__title">
 												<span>En cours</span>
 												<span>Fait</span>
 												<span>Standby</span>
 												<span>Fin</span>
-											</div>
-										</div>
+												<span></span>
+											</span>
+										</span>
 									</div>
 									<div class="attribution__list ">
 										<div class="attrib__responsable ">
@@ -198,7 +206,7 @@
 											</span>
 		
 										</div>
-										<div class="attrib__state w-full">
+										<div class="attrib__state">
 
 											<div class="state__check  ">
 												<span class=" relative  ">
@@ -219,11 +227,14 @@
 															class="fa fa-archive" aria-hidden="true"></i></i>
 													</span>
 												</span>
-												
+												<span>
+													<input id="datepicker" type="text">
+												</span>
+												<span class="icon__right " style="color:#000"><i class="fa fa-times"
+													aria-hidden="true"></i></span>
 											</div>
+											
 										</div>
-										<span class="icon__right " style="color:#000"><i class="fa fa-times"
-											aria-hidden="true"></i></span>
 									</div>
 									<div class="ajouter__une__tache">
 										<div class="attrib__responsable ">
@@ -278,9 +289,10 @@
 		src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js">
 	</script>
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="js/nav.js"></script>
 	<script src="js/jquery.modal.js"></script>
-	<!-- <script src="js/popover.js"></script> -->
+	<script src="js/datepicker-fr.js"></script>
 	<script src="js/tableau_de_bord_scme_controller.js"></script>
 
 

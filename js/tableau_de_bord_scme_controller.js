@@ -93,30 +93,34 @@ themes.forEach((theme, index) => {
             $('.activity__title').text(activity.title)
         })
     })
-    console.log($('.title__theme').text(`Dans ${theme.name}`))
+    $('.title__theme').text(`Dans ${theme.name}`)
 
 })
 
+
+//Ajouter une tâche
 $('#ajout__tache').click(() => {
-    let template = `<div class="attribution__list "style="height:auto">
-    <div class="attrib__responsable " style="margin-top:1rem">
-        <span class=" responsable " >
+    let template = `<div class="attribution__list ">
+    <div class="attrib__responsable ">
+        <span class=" responsable ">
             <span class="icon__left">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
             </span>
             <span class="name">Persone 01</span>
         </span>
     </div>
-    <div class="attrib__checklist " style="margin-top:1rem">
+    <div class="attrib__checklist ">
         <span class="list ">
             <span class=" icon__left ">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
             </span>
             <span class="name">Liste 01</span>
         </span>
+
     </div>
-    <div class="attrib__state w-full">
-        <div class="state__check" style="margin-top:1rem">
+    <div class="attrib__state">
+
+        <div class="state__check  ">
             <span class=" relative  ">
                 <input type="checkbox">
                 <span class="absolute icon-box "><i class="fa fa-recycle"
@@ -131,14 +135,84 @@ $('#ajout__tache').click(() => {
             </span>
             <span class=" relative  ">
                 <input type="checkbox">
-                <span class="absolute icon-box text-yellow-600 "><i class="fa fa-archive"
-                        aria-hidden="true"></i></i>
+                <span class="absolute icon-box text-yellow-600 "><i
+                        class="fa fa-archive" aria-hidden="true"></i></i>
                 </span>
             </span>
-           
+            <span>
+                <input class="datepicker" type="text">
+            </span>
+            <span class="icon__right " style="color:#000"><i class="fa fa-times"
+                aria-hidden="true"></i></span>
         </div>
+        
     </div>
-    <span class="icon__right " style="color:#000"><i class="fa fa-times"aria-hidden="true"></i></span>
 </div>`
+
     $('.ajouter__une__tache').before(template)
+    $(function () {
+        $('.datepicker').datepicker({
+            regional: "fr"
+        });
+    })
+
+    //supprimer une tâche
+    $('.icon__right').click(function () {
+        $(this).parents()[2].remove()
+    })
+
+    $('.responsable .name').click(function () {
+        $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
+        $('.responsable input').keypress(function (e) {
+            if (e.keyCode == 13) {
+                let name = $(this).val()
+                $(this).replaceWith(`<span class="name">${name}</span>`)
+            }
+        });
+
+    })
+    $('.list .name').click(function () {
+        $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
+        $('.list input').keypress(function (e) {
+            if (e.keyCode == 13) {
+                let name = $(this).val()
+                $(this).replaceWith(`<span class="name">${name}</span>`)
+            }
+        });
+
+    })
+})
+
+//selectionneur de date
+$(function () {
+    $('#datepicker').datepicker({
+        regional: 'fr'
+    })
+})
+
+//supprimer une tâche
+$('.icon__right').click(function () {
+    $(this).parents()[2].remove()
+})
+
+$('.responsable .name').click(function () {
+    $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
+    $('.responsable input').keypress(function (e) {
+        if (e.keyCode == 13) {
+            let name = $(this).val()
+            $(this).replaceWith(`<span class="name">${name}</span>`)
+        }
+    });
+
+})
+
+$('.list .name').click(function () {
+    $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
+    $('.list input').keypress(function (e) {
+        if (e.keyCode == 13) {
+            let name = $(this).val()
+            $(this).replaceWith(`<span class="name">${name}</span>`)
+        }
+    });
+
 })

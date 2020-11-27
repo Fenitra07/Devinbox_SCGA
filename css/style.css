@@ -700,6 +700,7 @@ li {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr;
+	grid-gap: 1.5rem ;
 }
 
 
@@ -707,11 +708,13 @@ li {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 1fr 2fr;
+	grid-gap: 2.25rem ;
 }
 .check__header .check__header__title{
 	width: 100%;;
 	display: grid;
 	place-content: center;
+	font-size:small;
 	place-items: center;
 	grid-template-columns:repeat(5,1fr);
 	color: #000;
@@ -741,6 +744,7 @@ li {
 	display: grid;
 	grid-template-columns:1fr 1fr 2fr;
 	align-items: center;
+	grid-gap: 1.5rem ;
 	width: 100%;
 	margin-bottom: 1rem;
 }

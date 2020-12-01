@@ -139,8 +139,11 @@ $('#ajout__tache').click(() => {
                         class="fa fa-archive" aria-hidden="true"></i></i>
                 </span>
             </span>
-            <span>
+            <span class="date__de__fin">
                 <input class="datepicker" type="text">
+                <span class="datepicker__icon">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                </span>
             </span>
             <span class="icon__right " style="color:#000"><i class="fa fa-times"
                 aria-hidden="true"></i></span>
@@ -172,8 +175,8 @@ $('#ajout__tache').click(() => {
 
     })
     $('.list .name').click(function () {
-        $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
-        $('.list input').keypress(function (e) {
+        $(this).replaceWith('<textarea type="text"class="name" style="outline:none; border:none"></textarea>')
+        $('.list textarea').keypress(function (e) {
             if (e.keyCode == 13) {
                 let name = $(this).val()
                 $(this).replaceWith(`<span class="name">${name}</span>`)
@@ -195,6 +198,7 @@ $('.icon__right').click(function () {
     $(this).parents()[2].remove()
 })
 
+//Editer nom du responsable
 $('.responsable .name').click(function () {
     $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
     $('.responsable input').keypress(function (e) {
@@ -206,13 +210,14 @@ $('.responsable .name').click(function () {
 
 })
 
-$('.list .name').click(function () {
-    $(this).replaceWith('<input type="text"class="name" style="outline:none; border:none"/>')
-    $('.list input').keypress(function (e) {
-        if (e.keyCode == 13) {
-            let name = $(this).val()
-            $(this).replaceWith(`<span class="name">${name}</span>`)
-        }
-    });
+//Editer la déscription de la tache
+// $('.list .name').click(function () {
+//     $(this).replaceWith('<textarea type="text"class="name" style="outline:none; border:none"></textarea>')
+//     $('.list textarea').keypress(function (e) {
+//         if (e.keyCode == 13) {
+//             let tache = $(this).val()
+//             $(this).replaceWith(`<span class="name" style="word-break:break-word">${tache}</span>`)
+//         }
+//     });
 
-})
+// })
